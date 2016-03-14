@@ -17,3 +17,8 @@ to learn docker/compose. Hilarity ensues.
 * docker-compose
 * tested on
  * Ubuntu 15.10
+
+## TODO
+* continue building out the full stack in docker-compose.yml
+* script to build all the images
+* get everything working in vagrant
