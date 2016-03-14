@@ -1,6 +1,14 @@
 version: '2'
+
 services:
-  dctestmain:
-    build: .
-    volumes:
-      - .:/dctest
+    dctest-main:
+        build: .
+        volumes:
+            - .:/dctest
+
+    dctest-yumcommon-volume:
+        build:
+            context: ./docker_images/yum-common/
+            dockerfile: Dockerfile
+        volumes:
+            - .:/dctest
