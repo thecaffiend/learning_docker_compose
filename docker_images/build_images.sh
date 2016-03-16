@@ -8,16 +8,17 @@ pushd "${scriptdir}"
 image_dirs="
 base
 build_tools_base
+miniconda_python35
 "
 # eventually
-#miniconda_python35
 #jupyter-nb
 
 for image in $image_dirs;
 do
     dir=$scriptdir/$image
     echo ""
-    echo "============== building $image in $dir ================"
+    echo "============== building $image ================"
+    echo "Testing for Dockerfile in: $dir"
     if [ -f "$dir/Dockerfile" ]; then
         echo "Found Dockerfile, building"
         docker build -t "dctest/$image" "$dir"

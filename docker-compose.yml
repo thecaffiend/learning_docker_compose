@@ -10,3 +10,8 @@ services:
         image: dctest/build_tools_base
         volumes:
             - .:/dctest
+
+    dctest-miniconda_python35:
+        image: dctest/miniconda_python35
+        volumes:
+            - .:/dctest
